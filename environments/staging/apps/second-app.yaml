@@ -9,7 +9,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/antonputra/lesson-158.git
+    repoURL: https://github.com/zerolimit5/argocd.git
     targetRevision: HEAD
     path: environments/staging/second-app
   destination:
