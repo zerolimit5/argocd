@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
-  namespace: foo
+  namespace: prod
   labels:
     app: nginx
 spec:
@@ -19,5 +19,12 @@ spec:
       containers:
         - name: nginx
           image: jescudero/nginx:v0.1.0
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "0.5"
+            requests:
+              memory: 256Mi
+              cpu: "0.2"
           ports:
             - containerPort: 80
